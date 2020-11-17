@@ -1,25 +1,29 @@
 package com.example.assignmentcustomadapter.model;
 
+import android.widget.ImageView;
+
+import com.example.assignmentcustomadapter.R;
+
 public class Movie
 {
-    private int movieImageId;
+    private int image;
     private String title;
     private Float ratings;
     private String description;
 
-    public Movie(int movieImageId, String title, Float ratings, String description) {
-        this.movieImageId = movieImageId;
+    public Movie(int image, String title, Float ratings, String description) {
+        this.image = image;
         this.title = title;
         this.ratings = ratings;
         this.description = description;
     }
 
-    public int getMovieImageId() {
-        return movieImageId;
+    public int getImage() {
+        return image;
     }
 
-    public void setMovieImageId(int movieImageId) {
-        this.movieImageId = movieImageId;
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getTitle() {

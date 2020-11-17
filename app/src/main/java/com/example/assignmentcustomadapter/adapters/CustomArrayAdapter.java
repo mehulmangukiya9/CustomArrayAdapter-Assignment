@@ -15,6 +15,9 @@ import java.util.ArrayList;
 public class CustomArrayAdapter extends BaseAdapter {
 
     ArrayList<Movie> movies;
+    private Integer[] movieImages = {R.drawable.passengers,R.drawable.dhamaal};
+    TextView title, ratings, description;
+    ImageView movieImage;
 
     public CustomArrayAdapter(ArrayList<Movie> movies)
     {
@@ -40,25 +43,37 @@ public class CustomArrayAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder viewHolder;
-
-        if(convertView == null){
+//        ViewHolder viewHolder;
+//
+//        if(convertView == null){
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_row_layout, null);
-            viewHolder = new ViewHolder(convertView);
-            convertView.setTag(viewHolder);
-        }
-        else {
-            viewHolder = (ViewHolder) convertView.getTag();
-        }
+//            viewHolder = new ViewHolder(convertView);
+//            convertView.setTag(viewHolder);
+//        }
+//        else {
+//            viewHolder = (ViewHolder) convertView.getTag();
+//        }
 
-        Movie movie = getItem(position);
-        viewHolder.titleTv.setText(movie.getTitle());
+        title = convertView.findViewById(R.id.title_text_view);
+        ratings = convertView.findViewById(R.id.rating_text_view);
+        description = convertView.findViewById(R.id.description_text_view);
+        movieImage = convertView.findViewById(R.id.image_view);
 
+        Movie movie = (Movie) getItem(position);
+
+        title.setText(movie.getTitle());
         String rating = Float.toString(movie.getRatings());
-        viewHolder.ratingsTv.setText(rating);
+        ratings.setText(rating);
+        description.setText(movie.getDescription());
+        movieImage.setImageResource(movieImages[position]);
 
-        viewHolder.descriptionTv.setText(movie.getDescription());
-        viewHolder.movieIv.setImageResource(movie.getMovieImageId());
+//        viewHolder.titleTv.setText(movie.getTitle());
+//
+//        String rating = Float.toString(movie.getRatings());
+//        viewHolder.ratingsTv.setText(rating);
+//
+//        viewHolder.descriptionTv.setText(movie.getDescription());
+//        viewHolder.movieIv.setImageResource(movieImages[position]);
 
         return convertView;
     }
