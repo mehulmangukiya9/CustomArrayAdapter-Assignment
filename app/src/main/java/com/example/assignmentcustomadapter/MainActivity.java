@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         movies.add(new Movie(R.drawable.dhamaal, "Dhamaal", (float) 5, "This is comedy movie of priyadarshan."));
         movies.add(new Movie(R.drawable.gangs_of_wasseypur, "Gangs of wasseypur", (float) 5, "This is one of the finest movie of bollywood."));
         movies.add(new Movie(R.drawable.bahubali, "Bahubali", (float) 5, "This movie has highest box office collection so far."));
+        movies.add(new Movie(R.drawable.pk, "PK", (float) 5, "It is alien based comedy movie."));
         return movies;
     }
 

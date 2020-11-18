@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CustomArrayAdapter extends BaseAdapter {
 
     ArrayList<Movie> movies;
-    private Integer[] movieImages = {R.drawable.passengers, R.drawable.dhamaal, R.drawable.gangs_of_wasseypur, R.drawable.bahubali};
+    private Integer[] movieImages = {R.drawable.passengers, R.drawable.dhamaal, R.drawable.gangs_of_wasseypur, R.drawable.bahubali, R.drawable.pk};
 
     public CustomArrayAdapter(ArrayList<Movie> movies)
     {

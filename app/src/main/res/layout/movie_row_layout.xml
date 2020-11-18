@@ -43,7 +43,7 @@
         android:id="@+id/image_view"
         android:layout_width="200dp"
         android:layout_height="180dp"
-        android:scaleType="fitCenter"
+        android:scaleType="fitStart"
         android:adjustViewBounds="true"/>
 </LinearLayout>
 </LinearLayout>
